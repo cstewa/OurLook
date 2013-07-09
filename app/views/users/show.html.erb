@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h3 class = "orange"> Hi, <%=current_user.name%>! </h3>
+
+<h4 class = "orange"> Purchased Items: </h4>
+
+<ul>
+	<% current_user.items.uniq.each do |item| %>
+	<li>
+		<img src = "<%= item.url %>" >
+		<%= item.name %>
+		</br>
+		<%= item.price %>
+		Quantity: <%= item.users(current_user).length %>
+		<%= link_to "Tell the OurLook community what you thought!", item_path(item.id) %>
+	</li>	
+	</br>
+	<% end %>
+</ul>
+
+<%= link_to "Back to OurLook", items_path %>

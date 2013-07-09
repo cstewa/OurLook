@@ -11,3 +11,75 @@
  *= require_self
  *= require_tree .
  */
+
+
+#images_main {
+	margin: auto;
+}
+
+#ring_main {
+	height: 250px;
+	-webkit-transform: rotate(15deg);  
+ 	-moz-transform: rotate(7.5deg);   
+  -ms-transform: rotate(7.5deg);   
+ 	-o-transform: rotate(7.5deg);  
+  transform: rotate(7.5deg);   
+} 
+
+#heels_main {
+	-webkit-transform: rotate(15deg);
+	height: 300px;
+}
+
+#dress_main {
+	height: 400px;
+}
+
+#shorts_main {
+	-webkit-transform: rotate(15deg);
+	float: right;
+	margin-right: 90px;
+}
+
+#purse_main {
+	-webkit-transform: rotate(-15deg);
+}
+
+img {
+	height: 400px;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	font-family: Geneva;
+}
+
+nav {
+	font-size: 12px;
+}
+
+#our_look {
+	color: #FF7D40;
+	text-align: center;
+}
+
+#click {
+	color: #FF7D40;
+	text-align: center;
+}
+
+#item_name, .orange {
+	color: #FF7D40;
+}
+
+.description {
+	float: right;
+	width: 250px;
+	margin-right: 20%;
+	border: 1.5px solid;
+	padding: 20px;
+	border-radius: 10px;
+}

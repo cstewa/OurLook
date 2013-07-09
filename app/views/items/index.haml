@@ -1,0 +1,22 @@
+%h1#our_look OurLook
+
+
+%div#images_main
+	
+	=link_to item_path(@heels.id) do
+		%img#heels_main{:src => "#{@heels.url}"}
+
+	=link_to item_path(@dress.id) do
+		%img#dress_main{:src => "#{@dress.url}"}
+
+	=link_to item_path(@ring.id) do
+		%img#ring_main{:src => "#{@ring.url}"}
+
+	=link_to item_path(@purse.id) do
+		%img#purse_main{:src => "#{@purse.url}"}
+
+	=link_to item_path(@shorts.id) do
+		%img#shorts_main{:src => "#{@shorts.url}"}
+
+%p#click (Click a piece.) 
+

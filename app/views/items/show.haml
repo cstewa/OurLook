@@ -1,0 +1,28 @@
+%p#notice= notice
+
+%h2#item_name= @item.name
+
+%img{:src => "#{@item.url}"}
+
+%div.description
+	=@item.description 
+	=@item.price
+	=link_to "Buy this!", edit_item_path(@item.id), :remote => true
+
+
+	%h3 Reviews:
+
+	%ul#reviews
+		-@item.reviews.each do |review|
+			%li #{review.text} --#{review.user.name}
+
+	%h4 Write a review for this item: 
+
+	= form_tag("/items/#{@item.id}", method: "put", :remote => true) do
+		= label_tag "What'd you think?!"
+		= text_field_tag (:review)
+		= submit_tag ("Submit Review")
+
+%br
+%br
+=link_to "Back to OurLook", items_path
